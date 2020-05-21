@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "40fa13b125a6f4063f0b2143499420e6",
+    "revision": "8fadf79dafaec183f044a1615d3a46c1",
     "url": "/toy-browser/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/toy-browser/static/css/2.e1bbab56.chunk.css"
   },
   {
-    "revision": "a7d5328ed1e2673a85ae",
+    "revision": "36474164d0603d486296",
     "url": "/toy-browser/static/css/main.68ebfb9e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/toy-browser/static/js/2.11643c87.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a7d5328ed1e2673a85ae",
-    "url": "/toy-browser/static/js/main.b0fe3635.chunk.js"
+    "revision": "36474164d0603d486296",
+    "url": "/toy-browser/static/js/main.8e038298.chunk.js"
   },
   {
     "revision": "d4cd57477de8d5aebd08",
