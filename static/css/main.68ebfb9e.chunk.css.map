@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAGA,uCACE,UAAW,CACX,mBACF","file":"main.68ebfb9e.chunk.css","sourcesContent":["@import '~antd/dist/antd.css';\n@import '~antd/dist/antd.css';\n\n.ant-steps-dot .ant-steps-item-content {\n  width: auto;\n  padding-bottom: 36px;\n}\n"]}
