@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.68ebfb9e.chunk.css",
-    "main.js": "/static/js/main.2ea38aba.chunk.js",
-    "main.js.map": "/static/js/main.2ea38aba.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.dad24413.js",
-    "runtime-main.js.map": "/static/js/runtime-main.dad24413.js.map",
-    "static/css/2.e1bbab56.chunk.css": "/static/css/2.e1bbab56.chunk.css",
-    "static/js/2.17a0a1ed.chunk.js": "/static/js/2.17a0a1ed.chunk.js",
-    "static/js/2.17a0a1ed.chunk.js.map": "/static/js/2.17a0a1ed.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.d4bd4537dfba9bde06f7160e2b6d8fe1.js": "/precache-manifest.d4bd4537dfba9bde06f7160e2b6d8fe1.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.e1bbab56.chunk.css.map": "/static/css/2.e1bbab56.chunk.css.map",
-    "static/css/main.68ebfb9e.chunk.css.map": "/static/css/main.68ebfb9e.chunk.css.map",
-    "static/js/2.17a0a1ed.chunk.js.LICENSE.txt": "/static/js/2.17a0a1ed.chunk.js.LICENSE.txt"
+    "main.css": "/toy-browser/static/css/main.68ebfb9e.chunk.css",
+    "main.js": "/toy-browser/static/js/main.2ea38aba.chunk.js",
+    "main.js.map": "/toy-browser/static/js/main.2ea38aba.chunk.js.map",
+    "runtime-main.js": "/toy-browser/static/js/runtime-main.91fcb081.js",
+    "runtime-main.js.map": "/toy-browser/static/js/runtime-main.91fcb081.js.map",
+    "static/css/2.e1bbab56.chunk.css": "/toy-browser/static/css/2.e1bbab56.chunk.css",
+    "static/js/2.f6386f65.chunk.js": "/toy-browser/static/js/2.f6386f65.chunk.js",
+    "static/js/2.f6386f65.chunk.js.map": "/toy-browser/static/js/2.f6386f65.chunk.js.map",
+    "index.html": "/toy-browser/index.html",
+    "precache-manifest.cc074d7c2938f92b688dc51aa434bf59.js": "/toy-browser/precache-manifest.cc074d7c2938f92b688dc51aa434bf59.js",
+    "service-worker.js": "/toy-browser/service-worker.js",
+    "static/css/2.e1bbab56.chunk.css.map": "/toy-browser/static/css/2.e1bbab56.chunk.css.map",
+    "static/css/main.68ebfb9e.chunk.css.map": "/toy-browser/static/css/main.68ebfb9e.chunk.css.map",
+    "static/js/2.f6386f65.chunk.js.LICENSE.txt": "/toy-browser/static/js/2.f6386f65.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.dad24413.js",
+    "static/js/runtime-main.91fcb081.js",
     "static/css/2.e1bbab56.chunk.css",
-    "static/js/2.17a0a1ed.chunk.js",
+    "static/js/2.f6386f65.chunk.js",
     "static/css/main.68ebfb9e.chunk.css",
     "static/js/main.2ea38aba.chunk.js"
   ]
