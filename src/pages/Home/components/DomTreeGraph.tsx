@@ -40,6 +40,7 @@ interface Props {
 const DomTreeGraph: React.FC<Props> = ({ tree, hasStyle = false }) => {
   const ref = React.useRef(null)
   const [graph, setGraph]: [any, any] = useState()
+  console.log('into')
 
   useEffect(() => {}, [])
 
@@ -49,6 +50,7 @@ const DomTreeGraph: React.FC<Props> = ({ tree, hasStyle = false }) => {
       // 此处需要规避反复渲染
     } else {
       const data = simplifyTree(tree, hasStyle)
+      console.log(tree, data)
       graph.data(data)
       graph.render()
       graph.fitView()

@@ -13,7 +13,7 @@ const { Step } = Steps
 
 const Home: FC = () => {
   const [html, setHtml] = useState(exmapleHtml)
-  const DOMTree = trimDOMTree(parseHtml(exmapleHtml))
+  const DOMTree = trimDOMTree(parseHtml(html))
   // eslint-disable-next-line no-console
   console.log('%c解析结果', 'font-size: 1.8em')
   // eslint-disable-next-line no-console

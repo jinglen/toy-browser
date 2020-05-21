@@ -23,53 +23,55 @@ import { parseCssRules, creatTagSelectors, bindCssRules } from '../computeCss'
 
 import { lastItem } from './util'
 
-let stack: any[]
-let currentTextNode: any = null
-const cssRules: any[] = []
+function createEmit(stack: any[]) {
+  const cssRules: any[] = []
+  let currentTextNode: any = null
 
-function emit(token: any) {
-  const top = lastItem(stack)
-  if (token.type === 'text') {
-    if (currentTextNode === null) {
-      currentTextNode = {
-        type: 'text',
-        content: '',
-      }
-      top.children.push(currentTextNode)
-    }
-    currentTextNode.content += token.char
-  } else if (token.type === 'element') {
-    currentTextNode = null
-    if (token.tagType === 'start' || token.tagType === 'selfClosing') {
-      // eslint-disable-next-line no-param-reassign
-      token.selectors = creatTagSelectors(token)
-      bindCssRules(cssRules, token, stack.slice(1))
-
-      top.children.push(token)
-      if (token.tagType === 'start') {
-        stack.push(token)
-      }
-    } else if (token.tagType === 'end') {
-      if (top.tagName === token.tagName) {
-        if (token.tagName === 'style') {
-          cssRules.push(...parseCssRules(top.children[0].content))
+  return function emit(token: any) {
+    const top = lastItem(stack)
+    if (token.type === 'text') {
+      if (currentTextNode === null) {
+        currentTextNode = {
+          type: 'text',
+          content: '',
         }
-        stack.pop()
+        top.children.push(currentTextNode)
+      }
+      currentTextNode.content += token.char
+    } else if (token.type === 'element') {
+      currentTextNode = null
+      if (token.tagType === 'start' || token.tagType === 'selfClosing') {
+        // eslint-disable-next-line no-param-reassign
+        token.selectors = creatTagSelectors(token)
+        bindCssRules(cssRules, token, stack.slice(1))
+
+        top.children.push(token)
+        if (token.tagType === 'start') {
+          stack.push(token)
+        }
+      } else if (token.tagType === 'end') {
+        if (top.tagName === token.tagName) {
+          if (token.tagName === 'style') {
+            cssRules.push(...parseCssRules(top.children[0].content))
+          }
+          stack.pop()
+        } else {
+          throw new Error(`lose end tag ${top.tagName}`)
+        }
       } else {
-        throw new Error(`lose end tag ${top.tagName}`)
+        // 未归类
       }
     } else {
-      // 未归类
+      currentTextNode = null
     }
-  } else {
-    currentTextNode = null
   }
 }
 
 export { trimDOMTree } from './util'
 
 export default function parseHtml(html: string): any {
-  stack = [{ type: 'document', children: [] }]
+  const stack = [{ type: 'document', children: [] }]
+  const emit = createEmit(stack)
   let state: any = createStateMachine(emit)
   // eslint-disable-next-line no-restricted-syntax
   for (const char of html) {
